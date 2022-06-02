@@ -7,4 +7,3 @@ if __name__ == "__main__":
         if (sys.argv.index(arg) != 0):
             arg_count += int(arg)
     print(arg_count)
-                    
