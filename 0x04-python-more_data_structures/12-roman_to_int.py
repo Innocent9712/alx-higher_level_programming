@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if type(roman_string) is not str:
+    if type(roman_string) is not str or\
+            roman_string is None:
         return None
     roman = {
         'I': 1,
@@ -24,5 +25,5 @@ def roman_to_int(roman_string):
             else:
                 count += roman[roman_string[i]]
         else:
-            return None
+            return (0)
     return count
