@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-from decimal import DivisionByZero
 
 def list_division(my_list_1, my_list_2, list_length):
     my_list_3 = []
