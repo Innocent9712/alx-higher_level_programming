@@ -1,0 +1,42 @@
+This test checks for several cases of the add_integer function
+
+Import module
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Test 1: both values as integers
+>>> print(add_integer(1, 2))
+3
+
+Test 2: a as a positive integer and b as a negative
+integer
+>>> print(add_integer(100, -2))
+98
+
+Test 3: only value a is passed as integer
+>>> print(add_integer(2))
+100
+
+Test 4: value a is a float and value b
+a negative integer
+>>> print(add_integer(100.3, -2))
+98
+
+Test 5: value a an integer and value b a string
+>>> print(add_integer(4, "School"))
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+Test 6: value a None
+>>> print(add_integer(None)) #doctest: +ELLIPSIS
+Traceback (most recent call last): 
+TypeError: ...
+
+Test 7: value a and b as booleans
+>>> print(add_integer(True, False)) #doctest: +ELLIPSIS
+Traceback (most recent call last): 
+TypeError: ...
+
+Test 8: no value passed
+>>> print(add_integer()) #doctest: +ELLIPSIS
+Traceback (most recent call last): 
+TypeError: b must be an integer

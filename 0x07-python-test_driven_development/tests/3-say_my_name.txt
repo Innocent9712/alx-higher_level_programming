@@ -1,0 +1,15 @@
+This test checks for several cases of the say_my_name function
+
+Import module
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Test 1: first_name argument must be a string
+>>> say_my_name(4, "Doe")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+Test 2: last_name argument must be a non empty string
+>>> say_my_name("John")
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
