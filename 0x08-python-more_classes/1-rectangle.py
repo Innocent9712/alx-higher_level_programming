@@ -11,8 +11,8 @@ class Rectangle:
         height fields
     """
     def __init__(self, width=0, height=0):
-        self.__height = height
         self.__width = width
+        self.__height = height
 
     @property
     def width(self):
@@ -26,7 +26,7 @@ class Rectangle:
         """
             Set the value of the width field
         """
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -44,7 +44,7 @@ class Rectangle:
         """
             Set the value of the height field
         """
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
