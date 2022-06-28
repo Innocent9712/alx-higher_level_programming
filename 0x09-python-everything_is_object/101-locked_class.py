@@ -1,3 +1,5 @@
 #!/usr/bin/python3
+"""Simple Class with specified fields"""
 class LockedClass:
-    __slots__ = {'last_name'}
+    """accepts only this field"""
+    __slots__ = {'first_name'}
