@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 def copy_list(lin):
-    return lin.copy()
+    return [x for x in lin]
