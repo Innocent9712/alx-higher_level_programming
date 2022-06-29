@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
 Function to multiply two matrixes
 returns a single matrix  of the result
