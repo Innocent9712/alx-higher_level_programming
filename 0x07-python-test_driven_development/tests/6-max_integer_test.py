@@ -25,6 +25,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertRaises(TypeError, max_integer, 4)
 
     def test_list_size(self):
+        """Tests for no parameter"""
         self.assertEqual(max_integer(), None)
 
     def test_list_output(self):
