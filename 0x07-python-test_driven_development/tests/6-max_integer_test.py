@@ -19,6 +19,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertTrue(len(f) > 1)
 
     def test_list_is_itterable(self):
+        """Tests that param is a iterable"""
         # with self.assertRaises(TypeError):
         #     max_integer(4)
         self.assertRaises(TypeError, max_integer, 4)
@@ -27,6 +28,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(), None)
 
     def test_list_output(self):
+        """right output is gotten"""
         self.assertEqual(max_integer([1, 3, 4, 2]), 4)
 
     def test_one_element(self):
@@ -47,6 +49,11 @@ class TestMaxInteger(unittest.TestCase):
         """Tests for a non-int type in list"""
         string = [1, 2, "Hello", 4, 5]
         self.assertRaises(TypeError, max_integer, string)
+
+    def test_empty_list(self):
+        """Tests for empty list []"""
+        e = []
+        self.assertIsNone(max_integer(e))
 
 if __name__ == "__main__":
     unittest.main()
