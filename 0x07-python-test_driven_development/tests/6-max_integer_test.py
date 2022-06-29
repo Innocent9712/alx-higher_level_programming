@@ -26,7 +26,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_list_size(self):
         """Tests for no parameter"""
-        self.assertEqual(max_integer(), None)
+        self.assertIsNone(max_integer())
 
     def test_list_output(self):
         """right output is gotten"""
@@ -55,6 +55,26 @@ class TestMaxInteger(unittest.TestCase):
         """Tests for empty list []"""
         e = []
         self.assertIsNone(max_integer(e))
+
+    def test_positive_end(self):
+        """Tests for all positive with max at end"""
+        e = [2, 10, 8, 36, 14, 50]
+        self.assertEqual(max_integer(e), 50)
+
+    def test_positive_middle(self):
+        """Tests for all positive with max in middle"""
+        m = [2, 10, 8, 360, 14, 50]
+        self.assertEqual(max_integer(m), 360)
+
+    def test_positive_beginning(self):
+        """Tests for all positive with max at beginning"""
+        b = [200, 10, 8, 36, 14, 50]
+        self.assertEqual(max_integer(b), 200)
+
+    def test_one_negative(self):
+        """Tests for list with one negative number"""
+        on = [200, 10, 8, -36, 14, 50]
+        self.assertEqual(max_integer(on), 200)
 
 
 if __name__ == "__main__":
