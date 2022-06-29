@@ -16,14 +16,16 @@ def text_indentation(text):
 
     i = 0
 
-    while i < len(text):
-        if text[i] in ".?:":
-            print(text[i])
-            print()
-            if (text[i + 1] == ' '):
-                i += 2
+    for a in text:
+        if i == 0:
+            if a == ' ':
                 continue
-            i += 1
-            continue
-        print(text[i], end="")
-        i += 1
+            else:
+                i = 1
+        if i == 1:
+            if a == '?' or a == '.' or a == ':':
+                print(a)
+                print()
+                i = 0
+            else:
+                print(a, end="")
