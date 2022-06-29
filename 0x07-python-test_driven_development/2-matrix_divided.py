@@ -11,7 +11,11 @@ def matrix_divided(matrix, div):
         Checks for conditions of the matrix and div values
         before performing division logic
     """
-    if not (all(all(isinstance(x, (int, float)) for x in j)
+    if type(matrix) is not list:
+        raise TypeError(
+            "matrix must be a matrix (list of lists) of integers/floats")
+
+    if not (all(all(type(x) in [int, float] for x in j)
             for j in matrix) and all(isinstance(j, list) for j in matrix)):
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats")
@@ -22,7 +26,7 @@ def matrix_divided(matrix, div):
                 raise TypeError(
                     "Each row of the matrix must have the same size")
 
-    if not isinstance(div, (int, float)):
+    if not isinstance(div, (int, float)) or type(div) is bool:
         raise TypeError("div must be a number")
 
     if div == 0:
