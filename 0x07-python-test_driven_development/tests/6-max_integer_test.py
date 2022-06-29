@@ -56,5 +56,6 @@ class TestMaxInteger(unittest.TestCase):
         e = []
         self.assertIsNone(max_integer(e))
 
+
 if __name__ == "__main__":
     unittest.main()
