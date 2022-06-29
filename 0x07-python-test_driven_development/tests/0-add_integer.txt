@@ -35,8 +35,3 @@ Test 7: value a and b as booleans
 >>> print(add_integer(True, False)) #doctest: +ELLIPSIS
 Traceback (most recent call last): 
 TypeError: ...
-
-Test 8: no value passed
->>> print(add_integer()) #doctest: +ELLIPSIS
-Traceback (most recent call last): 
-TypeError: b must be an integer
