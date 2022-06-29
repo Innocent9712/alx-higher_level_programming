@@ -32,5 +32,10 @@ class TestMaxInteger(unittest.TestCase):
         with self.assertRaises(TypeError):
             max_integer(None)
 
+    def test_non_int_arg(self):
+        """Tests for a non-int type in list"""
+        string = [1, 2, "Hello", 4, 5]
+        self.assertRaises(TypeError, max_integer, string)
+
 if __name__ == "__main__":
     unittest.main()
