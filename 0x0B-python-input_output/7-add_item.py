@@ -4,8 +4,6 @@
     as a json string
 """
 
-
-import json
 import os
 import sys
 
