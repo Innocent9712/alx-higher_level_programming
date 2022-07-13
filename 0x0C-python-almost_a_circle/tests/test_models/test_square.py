@@ -307,16 +307,16 @@ class TestSquare(unittest.TestCase):
         """test regular use of save_to_file"""
         s1 = Square(1, 1, 1, 1)
         s2 = Square(2, 2, 2, 2)
-        l = [s1, s2]
-        Square.save_to_file(l)
+        my_list = [s1, s2]
+        Square.save_to_file(my_list)
         with open("Square.json", "r") as f:
             ls = [s1.to_dictionary(), s2.to_dictionary()]
             self.assertEqual(json.dumps(ls), f.read())
 
     def test_stf_empty(self):
         """test save_to_file with empty list"""
-        l = []
-        Square.save_to_file(l)
+        my_list = []
+        Square.save_to_file(my_list)
         with open("Square.json", "r") as f:
             self.assertEqual("[]", f.read())
 
