@@ -5,6 +5,7 @@
 
 
 import json
+import os.path
 
 
 class Base():
@@ -80,11 +81,9 @@ class Base():
         """
         file_name = cls.__name__ + ".json"
         my_list = []
-        try:
+        if(os.path.exists(file_name)):
             with open(file_name, 'r') as my_file:
                 my_list = cls.from_json_string(my_file.read())
             for i, item in enumerate(my_list):
                 my_list[i] = cls.create(**my_list[i])
-        except:
-            pass
         return my_list
