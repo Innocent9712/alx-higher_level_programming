@@ -1,4 +1,4 @@
-#!/snap/bin/node
+#!/usr/bin/node
 const process = require('process');
 const newArr = process.argv.slice(2);
 let nextMax = 0
