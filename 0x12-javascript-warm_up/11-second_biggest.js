@@ -1,8 +1,9 @@
-#!/usr/bin/node
-if (process.argv.length < 4) {
-  console.log('0');
+#!/snap/bin/node
+const process = require('process');
+const newArr = process.argv.slice(2);
+
+if (newArr.length < 2) {
+  console.log(0);
 } else {
-  const args = process.argv.slice(2);
-  args.sort((a, b) => b - a);
-  console.log(args[1]);
+  console.log(newArr.sort((a, b) => (a - b))[newArr.length - 2]);
 }
