@@ -1,4 +1,4 @@
-#!/snap/bin/node
+#!/usr/bin/node
 const dict = require('./101-data').dict;
 
 function sorted (dictionary) {
