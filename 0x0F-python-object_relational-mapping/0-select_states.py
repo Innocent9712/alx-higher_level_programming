@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This module runs a script to fetch all states table
+in the database provided"""
 import MySQLdb
 from sys import argv
 
