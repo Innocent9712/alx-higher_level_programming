@@ -1,7 +1,15 @@
 #!/usr/bin/python3
 import math
 
+'''
+Module for task 6
+'''
+
+
 def find_peak(list_of_integers):
+    '''
+    Function to find the peak of a list of integers
+    '''
     if len(list_of_integers) == 0:
         return None
     current_index = math.floor(len(list_of_integers)/2)
@@ -13,7 +21,7 @@ def find_peak(list_of_integers):
         if (list_of_integers[prev] > peak):
             peak = list_of_integers[prev]
             return peak
-        
+
         if (list_of_integers[next] > peak):
             peak = list_of_integers[next]
             return peak
