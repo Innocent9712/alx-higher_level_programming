@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-import math
-
 '''
 Module for task 6
 '''
+import math
 
 
 def find_peak(list_of_integers):
