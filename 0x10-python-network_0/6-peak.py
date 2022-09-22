@@ -2,16 +2,15 @@
 '''
 Module for task 6
 '''
-import math
 
 
 def find_peak(list_of_integers):
     '''
     Function to find the peak of a list of integers
     '''
-    if len(list_of_integers) == 0:
+    if list_of_integers == []:
         return None
-    current_index = math.floor(len(list_of_integers)/2)
+    current_index = len(list_of_integers)//2
     peak = list_of_integers[current_index]
     prev = current_index - 1
     next = current_index + 1
