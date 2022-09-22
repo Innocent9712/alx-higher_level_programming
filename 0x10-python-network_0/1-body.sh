@@ -7,4 +7,4 @@
 #     curl -s "$1"
 # fi
 
-curl -s "$1"
+curl -sL "$1"
