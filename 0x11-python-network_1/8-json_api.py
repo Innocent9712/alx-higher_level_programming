@@ -17,8 +17,12 @@ if __name__ == "__main__":
     except IndexError:
         pass
 
-    res = requests.post(url, data=values).json()
-    if res == {}:
-        print("No result")
-    else:
-        print(f"[{res.get('id')}] {res.get('name')}")
+    res = requests.post(url, data=values)
+    try:
+        res = res.json()
+        if res == {}:
+            print("No result")
+        else:
+            print(f"[{res.get('id')}] {res.get('name')}")
+    except ValueError:
+        print("Not a valid JSON")
