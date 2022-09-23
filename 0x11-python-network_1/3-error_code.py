@@ -2,6 +2,7 @@
 """
 A Python script that takes in a URL, sends a request to the
 URL and displays the body of the response (decoded in utf-8).
+You must use urllib and sys
 """
 import urllib.error
 import urllib.request
