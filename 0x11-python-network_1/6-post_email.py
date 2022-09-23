@@ -7,10 +7,12 @@ You must use requests and sys
 """
 import requests
 from sys import argv
-url = argv[1]
-values = {
-    "email": argv[2]
-}
 
-res = requests.post(url, data=values)
-print(res.text)
+if __name__ == "__main__":
+    url = argv[1]
+    values = {
+        "email": argv[2]
+    }
+
+    res = requests.post(url, data=values)
+    print(res.text)

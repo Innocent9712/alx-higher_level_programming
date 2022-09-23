@@ -7,9 +7,10 @@ You must use requests and sys
 import requests
 from sys import argv
 
-res = requests.get(argv[1])
-try:
-    res.raise_for_status()
-    print(res.text)
-except requests.HTTPError:
-    print(f"Error code: {res.status_code}")
+if __name__ == "__main__":
+    res = requests.get(argv[1])
+    try:
+        res.raise_for_status()
+        print(res.text)
+    except requests.HTTPError:
+        print(f"Error code: {res.status_code}")

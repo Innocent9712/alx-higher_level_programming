@@ -8,12 +8,17 @@ Print all commits by: `<sha>: <author name>` (one by line)
 """
 import requests
 from sys import argv
-url = f"https://api.github.com/repos/{argv[2]}/{argv[1]}/commits?per_page=10"
-res = requests.get(url)
-try:
-    my_data = res.json()
-    # print(my_data)
-    for row in my_data:
-        print(f"{row['sha']}: {row['commit']['author']['name']}")
-except Exception:
-    print("None")
+
+if __name__ == "__main__":
+    url = f"https://api.github.com/repos/{argv[2]}/{argv[1]}"
+    url = url + "/commits?per_page=10"
+    res = requests.get(url)
+    try:
+        my_data = res.json()
+        # print(my_data)
+        for row in my_data:
+            sha = row.get('sha')
+            author_name = row.get('commit').get('author').get('name')
+            print(f"{sha}: {author_name}")
+    except Exception:
+        print("None")
