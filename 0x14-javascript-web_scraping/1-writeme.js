@@ -5,6 +5,6 @@ const args = require('node:process').argv;
 
 fs.writeFile(args[2], args[3], 'utf-8', function (err, data) {
   if (err) {
-    return console.error(err);
+    console.log(err);
   }
 });
