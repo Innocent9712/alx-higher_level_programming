@@ -9,10 +9,17 @@ req.get(`${api}/films/${args[2]}`, (err, res, body) => {
     console.error(err);
   } else {
     const result = JSON.parse(body).characters;
-    for (let i = 0; i < result.length; i++) {
-      req.get(result[i], (err, res, body) => {
-        err ? console.log(err) : console.log(JSON.parse(body).name);
-      });
-    }
+    printCharacters(result, 0);
   }
 });
+
+function printCharacters (characters, index) {
+  req(characters[index], function (err, response, body) {
+    if (!err) {
+      console.log(JSON.parse(body).name);
+      if (index + 1 < characters.length) {
+        printCharacters(characters, index + 1);
+      }
+    }
+  });
+}
