@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // Write a script that gets the contents of a webpage and stores it in a file.
-const fs = require('node:fs');
+const fs = require('fs');
 const args = require('process').argv;
 const req = require('request');
 
