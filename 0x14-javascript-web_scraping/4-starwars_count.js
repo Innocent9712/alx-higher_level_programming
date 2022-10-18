@@ -2,7 +2,7 @@
 // Write a script that prints the number of movies where the character
 // “Wedge Antilles” is present.
 const req = require('request');
-const args = require('node:process').argv;
+const args = require('process').argv;
 let count = 0;
 
 req.get(`${args[2]}`, (err, res, body) => {
