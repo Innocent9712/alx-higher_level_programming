@@ -1,5 +1,5 @@
 #!/usr/bin/node
-
+// Write a script that reads and prints the content of a file.
 const fs = require('node:fs');
 const args = require('node:process').argv;
 
